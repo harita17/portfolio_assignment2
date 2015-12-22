@@ -16,9 +16,7 @@ def get_data_from_portfolio(filename):
     for key, portfolio_data in dict_data.items():
         dict_data[key] = [((symbol.replace(' ', '').upper()), abs(count))
         for symbol, count in portfolio_data if count != 0]
-
     return dict_data
-
     filedata.close()
 
 def get_stock_price(symbol):  
@@ -46,10 +44,10 @@ def sort_descending(portfolio_dict):
         print
 
 if __name__ == '__main__':
-    
 
+       
     symbol_data = get_full_portfolio_value(get_data_from_portfolio(filename))
     sort_descending(symbol_data)
 
-
+                
 
